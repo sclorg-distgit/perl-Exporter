@@ -1,0 +1,38 @@
+From 6e7210f1ad3f709f846a812ab7db6543af90c477 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Petr=20P=C3=ADsa=C5=99?= <ppisar@redhat.com>
+Date: Wed, 6 May 2015 12:35:17 +0200
+Subject: [PATCH] Upgrade to 5.72
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Petr Písař <ppisar@redhat.com>
+---
+ lib/Exporter.pm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/lib/Exporter.pm b/lib/Exporter.pm
+index 4930505..0b3db21 100644
+--- a/lib/Exporter.pm
++++ b/lib/Exporter.pm
+@@ -9,7 +9,7 @@ require 5.006;
+ our $Debug = 0;
+ our $ExportLevel = 0;
+ our $Verbose ||= 0;
+-our $VERSION = '5.70';
++our $VERSION = '5.72';
+ our (%Cache);
+ 
+ sub as_heavy {
+@@ -223,7 +223,7 @@ right. Specifications are in the form:
+ 
+     [!]name         This name only
+     [!]:DEFAULT     All names in @EXPORT
+-    [!]:tag         All names in $EXPORT_TAGS{tag} anonymous list
++    [!]:tag         All names in $EXPORT_TAGS{tag} anonymous array
+     [!]/pattern/    All names in @EXPORT and @EXPORT_OK which match
+ 
+ A leading ! indicates that matching names should be deleted from the
+-- 
+2.1.0
+
